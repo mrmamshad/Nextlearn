@@ -1,22 +1,25 @@
 import { doSocialLogin } from "../actions";
+import { FaGoogle } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const LoginForm = () => {
     return (
-        <form action={doSocialLogin}>
+        <form action={doSocialLogin} className="flex   absolute top-3 right-2    justify-end gap-2 ">
             <button 
-                className="bg-pink-400 text-white p-1 rounded-md m-1 text-lg" 
+                className="  " 
                 type="submit" 
                 name="action" 
                 value="google">
-                Sign In With Google
+                <FaGoogle  size={28} />
+                
             </button>
 
             <button 
-                className="bg-black text-white p-1 rounded-md m-1 text-lg" 
+                className="" 
                 type="submit" 
                 name="action" 
                 value="github">
-                Sign In With GitHub
+                <FaGithub  size={28} />
             </button>
         </form>
     );
