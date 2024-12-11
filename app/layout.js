@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "../app/components/theme-provider";
 import { SidebarProvider, SidebarTrigger } from "../app/components/ui/sidebar"
 import { AppSidebar } from "../app/components/app-sidebar"
+import { ModeToggle } from "./components/ModeToggle";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
         <AppSidebar />
+        <ModeToggle />
          <ThemeProvider
             attribute="class"
             defaultTheme="system"
